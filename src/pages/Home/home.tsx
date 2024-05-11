@@ -10,6 +10,8 @@ import Batch from '../../images/model.jpg';
 import { Exams } from './components/examCard.tsx';
 import Founders from './components/founders.tsx';
 import ManagementBoard from './components/managementBoard.tsx';
+import styled from 'styled-components';
+import GeoLocation from './components/GeoLocation.tsx';
 export function Home() {
   return (
     <>
@@ -86,31 +88,27 @@ export function Home() {
         <ManagementBoard />
       </>
 
-      <div className='carousel-cont'>
+      <Container className='carousel-cont'>
         <h2>Discover the warmth and camaraderie of our school community.</h2>
-        <div className='gallery'>
-          <div className='carousel-1'>
+        <CarouselContainer className='gallery'>
+          <Carousel className='carousel-1'>
             <img src={SchImg} width={'100%'} alt='img' height={'100%'} />
             <div className='overlay'>{/* <h3>During inspection</h3> */}</div>
-          </div>
-          <div className='carousel-1'>
+          </Carousel>
+          <Carousel className='carousel-1'>
             <img src={Computer} width={'100%'} alt='img' height={'100%'} />
             <div className='overlay'>{/* <h3>Computer laboratory</h3> */}</div>
-          </div>
-          <div className='carousel-1'>
+          </Carousel>
+          <Carousel className='carousel-1'>
             <img src={SchImg1} width={'100%'} alt='img' height={'100%'} />
             <div className='overlay'>{/* <h3>School premises </h3> */}</div>
-          </div>
-          <div className='carousel-1'>
+          </Carousel>
+          <Carousel className='carousel-1'>
             <img src={SchImg2} width={'100%'} alt='img' height={'100%'} />
             <div className='overlay'>{/* <h3>During practical</h3> */}</div>
-          </div>
-        </div>
-      </div>
-
-      {/* <div>
-        <ICT />
-      </div> */}
+          </Carousel>
+        </CarouselContainer>
+      </Container>
 
       <div className='about' id='about'>
         <Box
@@ -132,9 +130,31 @@ export function Home() {
         />
       </div>
 
-      {/* <div>
+      <>
         <GeoLocation />
-      </div> */}
+      </>
     </>
   );
 }
+
+const Container = styled.div`
+  /* background: red; */
+  h2 {
+    margin: 3rem 0px;
+    text-decoration: underline;
+    text-align: center;
+  }
+`;
+
+const CarouselContainer = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+`;
+const Carousel = styled.div`
+  background: red;
+  width: 500px;
+  height: 300px;
+`;
