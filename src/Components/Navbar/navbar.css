@@ -1,0 +1,132 @@
+.navbar {
+  background: #184ca0;
+  height: 50px;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  box-shadow: 1px 1px 2px 3px rgba(120, 120, 120, 0.466);
+  z-index: 9999;
+}
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+.menu-icon {
+  display: none;
+}
+.navbar-icon {
+  margin-right: 6px;
+}
+.navbar-logo {
+  top: 4px;
+  font-size: 1.3rem;
+  left: 10px;
+  padding: 0px 10px;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  align-items: center;
+  color: #fff;
+  /* background: red; */
+}
+.navbar-logo span {
+  margin-left: 10px;
+  margin-top: 10px;
+}
+.navbar-logo-cont {
+  display: flex;
+  align-items: center;
+
+  background: red;
+}
+.nav-menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 50px;
+  list-style: none;
+}
+.nav-item {
+  height: 50px;
+  display: flex;
+  align-items: center;
+  transition: all 0.6s ease;
+  cursor: pointer;
+}
+.nav-item a {
+  text-decoration: none;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 5px;
+  color: #fff;
+  width: 70px;
+}
+.nav-item a:hover {
+  color: #000;
+}
+.nav-item a:active {
+  color: red;
+}
+
+@media screen and (max-width: 600px) {
+  .navbar {
+    /* position: relative; */
+    position: fixed;
+  }
+  .navbar-container {
+    justify-content: space-between;
+    /* background: red;       */
+  }
+
+  .nav-menu {
+    background: #184ca0;
+    /* background: red; */
+    /* background-image: linear-gradient(to top, #00c6fb 0%, #005bea 100%); */
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50px;
+    height: 100vh;
+    display: inline-block;
+    transition: all 1.6s ease;
+    z-index: 1;
+    padding: 10px 5px;
+  }
+  .navbar-logo {
+    color: #fff;
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+    /* background: red; */
+  }
+  .menu-icon {
+    display: block;
+    color: #fff;
+    position: absolute;
+    right: 25px;
+    top: 15px;
+    font-size: 1.3rem;
+  }
+  .nav-menu.active {
+    left: -130%;
+    display: none;
+    transition: 1.2s;
+    transition: all 1s ease;
+    z-index: 1;
+  }
+  .nav-item {
+    width: 100%;
+    display: block;
+  }
+  .nav-item a {
+    width: 100%;
+    border-bottom: 1px solid #fff;
+    justify-content: flex-start;
+  }
+}
