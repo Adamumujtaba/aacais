@@ -31,6 +31,9 @@ function Founders() {
 
 export default Founders;
 
+interface BoardCardProps {
+  src: string;
+}
 const Container = styled.div`
   width: 100%;
   display: flex;
@@ -52,7 +55,7 @@ const BoardContainer = styled.div`
   /* line-height: 18px; */
 `;
 
-const BoardCard = styled.div`
+const BoardCard = styled.div<BoardCardProps>`
   border: 1px solid transparent;
   width: 400px;
   height: 480px;
