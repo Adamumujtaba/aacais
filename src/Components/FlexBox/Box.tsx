@@ -1,9 +1,8 @@
-import React from 'react';
-import { FlexBox } from './box.styled';
+import { FlexBox } from './boxStyled';
 
 interface ComponentProps {
   header: string;
-  body: string;
+  body: any;
   imgUrl: string;
   btn?: string;
   reverse?: boolean;
