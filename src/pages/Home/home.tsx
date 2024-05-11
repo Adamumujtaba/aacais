@@ -7,38 +7,10 @@ import SchImg1 from '../../images/break.jpg';
 import SchImg2 from '../../images/computer3.jpg';
 
 import Batch from '../../images/model.jpg';
-// import axios from 'axios';
-// import { Helmet } from 'react-helmet';
-// import GeoLocation from '../../components/GeoLocation';
-// import ICT from '../../components/ICT';
-// import Founders from '../../components/Founders/founders';
-// import ManagementBoard from '../../components/Management/managementBoard';
-
+import { Exams } from './components/examCard.tsx';
+import Founders from './components/founders.tsx';
+import ManagementBoard from './components/managementBoard.tsx';
 export function Home() {
-  /* const [question, setQuestion] = useState('');
-  const [answer, setAnswer] = useState();
-  const [msg, setMsg] = useState('');
-  const [loading, setLoading] = useState(false);
-  let lines = answer?.split('\n');
-  const baseUrl = process.env.REACT_APP_API_BASE_URL;
-
-  const handleSubmit = (e) => {
-    setLoading(true);
-    e.preventDefault();
-    axios
-      .post(`${baseUrl}/openai`, { question })
-      .then((res) => {
-        setLoading(false);
-
-        setAnswer(res.data.msg);
-      })
-      .catch((error) => {
-        setLoading(false);
-        setMsg(error.response.data.msg);
-        // setMsg(error.message);
-      });
-  };
-  */
   return (
     <>
       <>
@@ -59,61 +31,9 @@ export function Home() {
         />
       </>
 
-      {/* <div>
+      <div>
         <Exams />
-      </div> */}
-
-      {/* <div className='assignment' style={{ display: '' }}>
-        <div className='child'>
-          <h2>How can I assist you?</h2>
-          <form onSubmit={handleSubmit}>
-            <textarea
-              onChange={(e) => setQuestion(e.target.value)}
-              value={question}
-              
-              placeholder='Ask me any question from any subject'
-            ></textarea>
-            <div className='btn-div'>
-              <button
-                type='submit'
-                disabled={question === '' ? true : false}
-                style={{
-                  background: question === '' ? 'lightgrey' : '#1358c8',
-                }}
-              >
-                {loading ? <Spin size='small' /> : 'Submit'}
-              </button>
-              <button
-                type='button'
-                className='clear'
-                onClick={() => setQuestion('')}
-              >
-                Clear
-              </button>
-            </div>
-          </form>
-        </div>
-        <div className='child'>
-          <div className='answer'>
-            <div>
-              {loading ? (
-                <Spin size='large' className='spin' />
-              ) : msg !== '' ? (
-                <h3>{msg}</h3>
-              ) : lines?.length > 0 ? (
-                lines?.map((line, index) => (
-                  <React.Fragment key={index}>
-                    {parse(line)}
-                    <br />
-                  </React.Fragment>
-                ))
-              ) : (
-                'Type the question and submit the form'
-              )}
-            </div>
-          </div>
-        </div>
-      </div> */}
+      </div>
 
       <>
         <Box
@@ -158,13 +78,13 @@ export function Home() {
         />
       </>
 
-      {/* <>
+      <>
         <Founders />
-      </> */}
-      {/* 
+      </>
+
       <>
         <ManagementBoard />
-      </> */}
+      </>
 
       <div className='carousel-cont'>
         <h2>Discover the warmth and camaraderie of our school community.</h2>
