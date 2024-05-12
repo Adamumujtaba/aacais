@@ -166,7 +166,6 @@ export function Home() {
 }
 
 const Container = styled.div`
-  /* background: red; */
   h2 {
     margin: 3rem 0px;
     text-decoration: underline;

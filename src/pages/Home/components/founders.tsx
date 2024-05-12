@@ -11,14 +11,14 @@ function Founders() {
             <BoardCard src={Atiku}>
               <div className='imageDiv' />
               <div className='borad-info'>
-                <h2>Alh Atiku Abubakar</h2>
+                <h2>Former Vice President Alh Atiku Abubakar</h2>
                 <strong>Founder</strong>
               </div>
             </BoardCard>
             <BoardCard src={Sarki}>
               <div className='imageDiv' />
               <div className='borad-info'>
-                <h2>Alh Adamu Sanda Gangwari</h2>
+                <h2>His Royal Father Alh. Umar Adamu Sanda</h2>
                 <strong>Founder</strong>
               </div>
             </BoardCard>
