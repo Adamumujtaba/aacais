@@ -57,7 +57,7 @@ function ManagementBoard() {
 export default ManagementBoard;
 
 interface BoardCardProps {
-  src: string; // Explicitly define the type of the src prop
+  src: string; 
 }
 
 const Container = styled.div`

@@ -12,7 +12,18 @@ import Founders from './components/founders.tsx';
 import ManagementBoard from './components/managementBoard.tsx';
 import styled from 'styled-components';
 import GeoLocation from './components/GeoLocation.tsx';
+import { useState } from 'react';
+import Footer from '../../Components/Footer/footer.tsx';
 export function Home() {
+  const [selectedImage, setSelectedImage] = useState(null);
+
+  const handleImageClick = (imageSrc) => {
+    setSelectedImage(imageSrc);
+  };
+
+  const handleCloseImage = () => {
+    setSelectedImage(null);
+  };
   return (
     <>
       <>
@@ -91,24 +102,37 @@ export function Home() {
       <Container className='carousel-cont'>
         <h2>Discover the warmth and camaraderie of our school community.</h2>
         <CarouselContainer className='gallery'>
-          <Carousel className='carousel-1'>
+          <Carousel onClick={() => handleImageClick(SchImg)}>
             <img src={SchImg} width={'100%'} alt='img' height={'100%'} />
             <div className='overlay'>{/* <h3>During inspection</h3> */}</div>
           </Carousel>
-          <Carousel className='carousel-1'>
+          <Carousel onClick={() => handleImageClick(Computer)}>
             <img src={Computer} width={'100%'} alt='img' height={'100%'} />
             <div className='overlay'>{/* <h3>Computer laboratory</h3> */}</div>
           </Carousel>
-          <Carousel className='carousel-1'>
+          <Carousel onClick={() => handleImageClick(SchImg1)}>
             <img src={SchImg1} width={'100%'} alt='img' height={'100%'} />
             <div className='overlay'>{/* <h3>School premises </h3> */}</div>
           </Carousel>
-          <Carousel className='carousel-1'>
+          <Carousel onClick={() => handleImageClick(SchImg2)}>
             <img src={SchImg2} width={'100%'} alt='img' height={'100%'} />
             <div className='overlay'>{/* <h3>During practical</h3> */}</div>
           </Carousel>
         </CarouselContainer>
       </Container>
+      <>
+        {selectedImage && (
+          <ImageModal src={selectedImage}>
+            <>
+              <div
+                style={{ width: '100%', height: '70%' }}
+                className='imageDiv'
+              />
+              <CloseButton onClick={handleCloseImage}>Close</CloseButton>
+            </>
+          </ImageModal>
+        )}
+      </>
 
       <div className='about' id='about'>
         <Box
@@ -133,6 +157,10 @@ export function Home() {
       <>
         <GeoLocation />
       </>
+
+      <>
+        <Footer />
+      </>
     </>
   );
 }
@@ -151,10 +179,51 @@ const CarouselContainer = styled.div`
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  gap: 30px;
+  gap: 20px;
 `;
 const Carousel = styled.div`
-  background: red;
-  width: 500px;
+  width: 300px;
   height: 300px;
+  cursor: pointer;
+  img {
+    border-radius: 5px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+      rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+  }
+`;
+interface Props {
+  src?: string;
+}
+
+const ImageModal = styled.div<Props>`
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+
+  .imageDiv {
+    height: 80%;
+    width: 100%;
+    background-image: url(${(props) => props.src || ''});
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+`;
+
+const CloseButton = styled.button`
+  position: absolute;
+  top: 80px;
+  right: 0;
+  background-color: #fff;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 5px;
 `;
