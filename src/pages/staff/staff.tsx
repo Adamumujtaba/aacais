@@ -1,4 +1,3 @@
-import HM from '../../images/hm.png';
 import Adamu from '../../images/MalamAdamu.jpg';
 import Abdulqadir from '../../images/abdulkadir.jpg';
 import Aliyu from '../../images/aliyu.png';
