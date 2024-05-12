@@ -1,11 +1,19 @@
 import Waec from '../../../images/waec.jpg';
 import Neco from '../../../images/neco.png';
 import Nbias from '../../../images/nbias.jpg';
+import FCE from '../../../images/logoFce.png';
 import styled from 'styled-components';
 
 export function Exams() {
   return (
     <ExamsBox>
+      <Card>
+        <img alt='example' height={'100%'} width={'100%'} src={FCE} />
+        <Meta>
+          <h4>FCE</h4>
+          <p>Federal College of Education</p>
+        </Meta>
+      </Card>
       <Card>
         <img alt='example' height={'100%'} width={'100%'} src={Waec} />
         <Meta>
