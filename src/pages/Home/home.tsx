@@ -145,9 +145,38 @@ export function Home() {
               Toungo, Jada, and kojoli. Model islamiyya school Ganye is an
               integrated school that trains student on both Western and
               Islamic/Arabic education it has three sections. The primary school
-              section known as model islamiyya school Ganye, the junior
-              secondary School and the senior secondary School known as Atiku
+              section known as Model Islamiyya school Ganye, the junior
+              secondary school and the senior secondary school known as Atiku
               Abubakar Centre for Arabic and Islamic studies Ganye (A.A.C.A.I.S)
+              The school is dividen into 4 houses:
+              <ol style={{ marginBlock: '10px' }}>
+                <li>
+                  <strong>Atiku Abubakar House</strong> Named after a prominent
+                  politician known for his contributions to education. The Atiku
+                  Abubakar House was established to honor the legacy of Atiku
+                  Abubakar and foster a spirit of leadership and excellence
+                  among students.
+                </li>
+                <li>
+                  <strong>Gangwari House </strong>
+                  Named after a historical figure known for his bravery and
+                  leadership.
+                </li>
+                <li>
+                  <strong>Walin Ganye House </strong>
+                  Named after a traditional titleholder in the Ganye community.
+                  Walin Ganye House was established to honor the legacy of Atiku
+                  Abubakar and foster a spirit of leadership and excellence
+                  among students.
+                </li>
+                <li>
+                  <strong>Sani Jada House </strong>
+                  Named after a respected elder and community leader history,
+                  Sani Jada House embodies the values of integrity and service,
+                  instilling a sense of responsibility and citizenship in its
+                  members.
+                </li>
+              </ol>
             </p>
           }
           imgUrl={Batch}
