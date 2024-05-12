@@ -15,14 +15,14 @@ import GeoLocation from './components/GeoLocation.tsx';
 import { useState } from 'react';
 import Footer from '../../Components/Footer/footer.tsx';
 export function Home() {
-  const [selectedImage, setSelectedImage] = useState(null);
+  const [selectedImage, setSelectedImage] = useState('');
 
-  const handleImageClick = (imageSrc) => {
+  const handleImageClick = (imageSrc: string) => {
     setSelectedImage(imageSrc);
   };
 
   const handleCloseImage = () => {
-    setSelectedImage(null);
+    setSelectedImage('');
   };
   return (
     <>
