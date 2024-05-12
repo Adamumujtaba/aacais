@@ -106,6 +106,9 @@ const Container = styled.div`
 `;
 const BoardContainer = styled.div`
   display: inline-flex;
+  /* background: red; */
+  width: 100%;
+  justify-content: center;
   transition: all 0.5s ease;
   .show {
     display: block;
@@ -165,8 +168,9 @@ const BoardCard = styled.div<BoardCardProps>`
     }
   }
   @media screen and (max-width: 760px) {
-    min-width: 300px;
+    /* min-width: 300px; */
     width: 100%;
+    box-sizing: border-box;
     height: 420px;
     margin: 0;
     margin-top: 3rem;
