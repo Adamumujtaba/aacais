@@ -1,5 +1,6 @@
 import Waziri from '../../../images/waziri.jpg';
 import Avatar from '../../../images/male_avatar.svg';
+import HM from '../../../images/hm.png';
 import styled from 'styled-components';
 
 function ManagementBoard() {
@@ -9,6 +10,13 @@ function ManagementBoard() {
 
       <Container>
         <BoardContainer>
+          <BoardCard src={HM}>
+            <div className='imageDiv' />
+            <div className='borad-info'>
+              <h2>Malam Kabiru Sa'ad</h2>
+              <strong>Co-ordinator</strong>
+            </div>
+          </BoardCard>
           <BoardCard src={Waziri}>
             <div className='imageDiv' />
             <div className='borad-info'>
@@ -57,7 +65,7 @@ function ManagementBoard() {
 export default ManagementBoard;
 
 interface BoardCardProps {
-  src: string; 
+  src: string;
 }
 
 const Container = styled.div`
