@@ -60,7 +60,8 @@ const images = [
     title: 'Alh. Idris Sulaiman',
   },
 ];
-const CustomImage = ({ image, ...rest }) => {
+
+const CustomImage = ({ image, ...rest }: any) => {
   return (
     <ImageCard>
       <img {...rest} src={image.original} alt={image.originalAlt} />
