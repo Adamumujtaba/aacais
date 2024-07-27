@@ -1,4 +1,3 @@
-import React from 'react';
 import Box from '../../components/flexbox/box';
 import EduSvg from '../../images/edu.svg';
 import ExamComponents from './exams.components';

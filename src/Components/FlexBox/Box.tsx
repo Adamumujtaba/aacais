@@ -1,4 +1,3 @@
-import React from 'react';
 import { FlexBox } from './box.styled';
 
 interface FlexBoxProps {

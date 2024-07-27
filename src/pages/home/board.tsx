@@ -1,4 +1,3 @@
-import React from 'react';
 import ImageGallery from 'react-image-gallery';
 import styled from 'styled-components';
 import Waziri from '../../images/waziri.jpg';

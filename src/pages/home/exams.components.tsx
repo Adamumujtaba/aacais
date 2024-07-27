@@ -1,4 +1,3 @@
-import React from 'react';
 import styled from 'styled-components';
 import Waec from '../../images/waec.jpg';
 import Neco from '../../images/neco.png';

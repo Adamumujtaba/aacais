@@ -1,4 +1,3 @@
-import React from 'react';
 import Sarki from '../../images/sarki.jpeg';
 import Atiku from '../../images/atiku.jpg';
 import Walin from '../../images/walin.jpeg';
