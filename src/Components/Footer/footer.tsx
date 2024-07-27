@@ -1,17 +1,14 @@
+import React from 'react';
 import { Link } from 'react-router-dom';
+
 function Footer() {
   return (
     <>
-      <div className='footer'>
+      <div className="footer">
         <div>
           <h3>School Name</h3>
-          <h4>
-            Model Islamiyya School Ganye consist of Nursery and Primary section
-          </h4>
-          <h4>
-            Atiku Abubakar center for Arabic and Islamic Studies (AACAIS)
-            consist of JSS and SSS{' '}
-          </h4>
+          <h4>Model Islamiyya School Ganye consist of Nursery and Primary section</h4>
+          <h4>Atiku Abubakar center for Arabic and Islamic Studies (AACAIS) consist of JSS and SSS </h4>
         </div>
 
         <div>
@@ -27,13 +24,14 @@ function Footer() {
           <h3>Useful links</h3>
           <ul>
             <li>
-              <Link to='/'>Home</Link>
+              <Link to="home">Home</Link>
             </li>
             <li>
-              <Link to='/staff'>Staff</Link>
-            </li>
+              <Link to="/staff">Staff</Link>
+            </li>{' '}
             <li>
-              <Link to='/'>About</Link>
+              {' '}
+              <Link to="about">About</Link>
             </li>
           </ul>
         </div>
@@ -47,10 +45,7 @@ function Footer() {
           </ul>
         </div>
       </div>
-      <div className='copyright'>
-        {' '}
-        &copy; Copyright Model Islamiyya School Ganye 2002
-      </div>
+      <div className="copyright"> &copy; Copyright Model Islamiyya School Ganye 2002</div>
     </>
   );
 }

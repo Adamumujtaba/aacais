@@ -1,24 +1,34 @@
-import Sarki from '../../../images/sarki.jpeg';
-import Atiku from '../../../images/atiku.jpg';
+import React from 'react';
+import Sarki from '../../images/sarki.jpeg';
+import Atiku from '../../images/atiku.jpg';
+import Walin from '../../images/walin.jpeg';
+
 import styled from 'styled-components';
 function Founders() {
   return (
     <>
       <div style={{ margin: '6rem 0px' }}>
-        <Header>Founders</Header>
+        <Header>The School Founders</Header>
         <Container>
           <BoardContainer>
             <BoardCard src={Atiku}>
-              <div className='imageDiv' />
-              <div className='borad-info'>
-                <h2>Former Vice President Alh Atiku Abubakar</h2>
+              <div className="imageDiv" />
+              <div className="borad-info">
+                <h2>Alh Atiku Abubakar</h2>
+                <strong>Founder</strong>
+              </div>
+            </BoardCard>
+            <BoardCard src={Walin}>
+              <div className="imageDiv" />
+              <div className="borad-info">
+                <h2>Alh Sadiq Mohammed (Walin Ganye)</h2>
                 <strong>Founder</strong>
               </div>
             </BoardCard>
             <BoardCard src={Sarki}>
-              <div className='imageDiv' />
-              <div className='borad-info'>
-                <h2>His Royal Father Alh. Umar Adamu Sanda</h2>
+              <div className="imageDiv" />
+              <div className="borad-info">
+                <h2>Alh Adamu Sanda Gangwari</h2>
                 <strong>Founder</strong>
               </div>
             </BoardCard>
@@ -31,9 +41,6 @@ function Founders() {
 
 export default Founders;
 
-interface BoardCardProps {
-  src: string;
-}
 const Container = styled.div`
   width: 100%;
   display: flex;
@@ -55,6 +62,9 @@ const BoardContainer = styled.div`
   /* line-height: 18px; */
 `;
 
+type BoardCardProps = {
+  src: string;
+};
 const BoardCard = styled.div<BoardCardProps>`
   border: 1px solid transparent;
   width: 400px;

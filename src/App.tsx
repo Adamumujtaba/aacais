@@ -1,23 +1,20 @@
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import './App.css';
-import Navbar from './Components/Navbar/Navbar';
-import { Home } from './pages/Home';
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import AppLayout from './components/layout/app.layout';
+import Home from './pages/home';
+import { appPaths } from './components/layout/appPaths';
 import Staff from './pages/staff/staff';
+import './App.css';
 function App() {
   return (
-    <BrowserRouter>
-      <Navbar />
+    <Router>
       <Routes>
-        <Route path='/' Component={Home} />
-        {/* <Route path="/signup" Component={SignUp} /> */}
-        {/* <Route path='/album' Component={Album} /> */}
-        <Route path='/staff' Component={Staff} />
-        {/* <Route path='/otp_verification' Component={OtpPage} /> */}
-
-        {/* <Route path='*' element={<Navigate to='/' />} /> */}
+        <Route path={appPaths.home} element={<AppLayout />}>
+          <Route index element={<Home />} />
+          <Route path={appPaths.staff} element={<Staff />} />
+        </Route>
       </Routes>
-      {/* <Footer /> */}
-    </BrowserRouter>
+    </Router>
   );
 }
 

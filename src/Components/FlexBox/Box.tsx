@@ -1,24 +1,24 @@
-import { FlexBox } from './boxStyled';
+import React from 'react';
+import { FlexBox } from './box.styled';
 
-interface ComponentProps {
+interface FlexBoxProps {
   header: string;
-  body: any;
+  body: React.ReactNode;
   imgUrl: string;
   btn?: string;
   reverse?: boolean;
 }
-
-function Box({ header, body, imgUrl, btn, reverse }: ComponentProps) {
+function Box({ header, body, imgUrl, btn, reverse }: FlexBoxProps) {
   return (
     <>
       <FlexBox reverse={reverse}>
         <div>
           <h2>{header}</h2>
-          <p>{body}</p>
+          <section>{body}</section>
           {btn && <button>{btn}</button>}
         </div>
         <div>
-          <img src={imgUrl} alt='img' width={'100%'} height={'100%'} />
+          <img src={imgUrl} alt="img" width={'100%'} height={'100%'} />
         </div>
       </FlexBox>
     </>

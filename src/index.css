@@ -1,0 +1,14 @@
+@import "react-image-gallery/styles/css/image-gallery.css";
+:root{
+	--16px:1rem;
+	--24px:1.5rem;
+	--32px:2rem;
+	--64px:4rem;
+	--100px:6.25rem;
+	--200px:12.25rem;
+	--300px:18.75rem;
+	--400px:25rem;
+	--500px:31.25rem;
+	--600px:37.5rem;
+	--760px:47.5rem;
+}
