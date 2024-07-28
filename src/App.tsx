@@ -1,9 +1,9 @@
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import AppLayout from './components/layout/app.layout';
 import Home from './pages/home';
-import { appPaths } from './components/layout/appPaths';
+import { appPaths } from './components/layout/app-paths';
 import Staff from './pages/staff/staff';
 import './App.css';
+import AppLayout from './components/layout/app-layout';
 function App() {
   return (
     <Router>

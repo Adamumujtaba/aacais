@@ -10,7 +10,7 @@ import SchImg2 from '../../images/computer3.jpg';
 import Founders from './founders.component';
 import GeoLocation from './geo.location';
 import Board from './board';
-import MessageCardComponent from '../../components/message-card/message-card.component';
+import MessageCardComponent from '../../components/message-card/message-card-component';
 
 function Home() {
   return (
